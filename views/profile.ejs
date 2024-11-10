@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+  <h1>Profile</h1>
+  <div class="list">
+    <div class="following-list-container">
+      <button class="following">Following</button>
+      <ul class="following-list">
+      </ul>
+    </div>
+    <div class="followers-list-container">
+      <button class="followers">Followers</button>
+      <ul class="followers-list">
+      </ul>
+    </div>
+  </div>
+  <% if (user) { %>
+    <script src="/js/profile.js"></script>
+  <% } %>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search</title>
+</head>
+<body>
+  <% if (users.length > 0) { %>
+    <ul class="users-list">
+      <% users.forEach((user) => { %>
+        <li data-userid="<%= user.id %>">
+          <a href="/profile?id=<%= user.id %>"><%= user.name %></a>
+          <button class="follow-button">Follow</button>
+        </li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+      <p>No users found</p>
+  <% } %>
+  <script src="/js/search.js"></script>
+</body>
+</html>
